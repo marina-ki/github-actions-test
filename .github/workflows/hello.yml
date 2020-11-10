@@ -10,7 +10,7 @@ jobs:
     name: Greeting
     runs-on: ubuntu-latest
     steps:
-
+      - uses: actions/checkout@v1
       - name: echo head_ref
       - run: echo '${{ github.head_ref }}'
 
