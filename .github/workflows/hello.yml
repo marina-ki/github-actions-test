@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: echo head_ref
-      - run: echo '${{ github.head_ref }}'
+        run: echo '${{ github.head_ref }}'
 
       - name: echo ref
-      - run: echo '${{ github.ref }}'
+        run: echo '${{ github.ref }}'
