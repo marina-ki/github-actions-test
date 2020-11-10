@@ -1,9 +1,20 @@
 name: Hello, World!
-on: push
+on:
+  pull_request:
+    types: [closed]
+  branches:
+    - master
+    tags:
+      - "v*"
 
 jobs:
   build:
     name: Greeting
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello, World!"
+
+      - name: echo head_ref
+      - run: echo '${{ github.head_ref }}'
+
+      - name: echo ref
+      - run: echo '${{ github.ref }}'
