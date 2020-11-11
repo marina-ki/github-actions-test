@@ -1,7 +1,7 @@
 name: Hello, World!
 on:
   pull_request:
-    types: [closed]
+    # types: [closed]
     branches:
       - master
 
@@ -20,6 +20,6 @@ jobs:
       - name: Comment to the Pull Request
         run: |
           curl -X POST \
-               -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-               -d "{\"body\": \"hello"}" \
-               ${{ github.event.pull_request.comments_url }}
+              -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+              -d "{\"body\": \"hello"}" \
+              ${{ github.event.pull_request.comments_url }}
