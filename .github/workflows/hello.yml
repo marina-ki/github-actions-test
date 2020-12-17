@@ -17,5 +17,6 @@ jobs:
         uses: rtCamp/action-slack-notify@master
         env:
           SLACK_COLOR: "good"
-          SLACK_MESSAGE: "slackのメッセージのテスト"
+          SLACK_MESSAGE: ${{env.RESULT_URL}}
+          SLACK_TITLE: "slackのメッセージのテスト"
           SLACK_WEBHOOK: ${{secrets.SLACK_WEBHOOK}}
